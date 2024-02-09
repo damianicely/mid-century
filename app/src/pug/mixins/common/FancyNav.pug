@@ -64,10 +64,6 @@ mixin FancyNav(params={})
         duration: 0.8,
         delay: 0.4
       } data-zanim-trigger='scroll')
-        a(href='#!').fancynavbar-addon-item
-          span.fab.fa-twitter
-        a(href='#languageModal', data-bs-toggle='modal').fancynavbar-addon-item
-          span.font-secondary.ls.fw-black.fs-10.d-block EN
         if item
           a(href=item[2] class=item[0]).fancynavbar-addon-item
             span(class=item[1])
@@ -85,13 +81,6 @@ mixin FancyNav(params={})
                 .col-auto.ps-2
                   each item in sitemap.meubles
                     +NavLink(item, 'meubles/')      
-
-          li.fancynav-item
-            a(href=`${CWD}pages/portfolio.html`).fancynav-link
-              span.fancynav-link-content portfolio
-          li.fancynav-item
-            a(href=`${CWD}pages/contact.html`).fancynav-link
-              span.fancynav-link-content contact
       else
         ul.fancynavbar-nav
           each url, title in menu
