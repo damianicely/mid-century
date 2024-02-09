@@ -1,0 +1,8 @@
+extends ../layouts/LayoutTheme
+include ../mixins/meubles/FauteuilsPaperknife
+
+block beforeMainContent
+  +FancyNav
+
+append mainContent  
+  +SingleProductDemo

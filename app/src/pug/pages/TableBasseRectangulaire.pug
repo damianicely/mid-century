@@ -1,0 +1,28 @@
+mixin SingleProductDemo
+  +Section.py-6#page-single-product
+    .row
+      .col-lg-8.pe-lg-6
+        .row
+          .col-12
+            nav(aria-label="breadcrumb")
+              ol.breadcrumb.font-secondary.py-2.my-1
+                li.breadcrumb-item
+                  a(href=`${CWD}index.html`) Accueil
+                li.breadcrumb-item.active(aria-current='page') table-basse-rectangulaire
+
+            h1.fs-6.mb-2 Table Basse Rectangulaire avec étagère en rotin, modèle 204. Designer - Kurt Østervig
+          .col-12.mt-4
+            img(src=`${CWD}assets/img/scandi/lg-newton-71.jpg` alt='').rounded.img-fluid
+          .col-12.mt-4
+            img(src=`${CWD}assets/img/scandi/lg-newton-72.jpg` alt='').rounded.img-fluid
+      .col-lg-4
+        .sticky-top.py-6.py-lg-8
+          h2.fw-normal €1500.00&nbsp;
+          h6.mt-4 Detailles
+          p.text-body-secondary Cette table basse a été conçue par Kurt Østervig pour Jason Møbler au Danemark. Elle présente une structure en teck et une étagère en rotin.
+          h6.mt-4 Designer
+          a(href=`https://en.wikipedia.org/wiki/Kurt_%C3%98stervig`).p Kurt Østervig
+          h6.mt-4 Etat
+          p.text-body-secondary Bon.
+          h6.mt-4 Contact
+          a(mailto=`damianicely@gmail.com`).p.text-body-secondary damianicely@gmail.com

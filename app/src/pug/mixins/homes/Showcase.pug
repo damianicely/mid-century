@@ -33,50 +33,121 @@ mixin Showcase
               span.font-base.fst-italic.fw-normal découvrir 
           br
           span.overflow-hidden.d-inline-block.pb-2
-            span.d-inline-block(data-zanim-xs!={delay: 1.1}) la collection Newton
+            span.d-inline-block(data-zanim-xs!={delay: 1.1}) la collection Design
         .overflow-hidden
           p.mt-3.mt-sm-4.font-secondary.lead(data-zanim-xs!={delay: 1.2}) Une sélection unique de meubles danois du milieu du siècle.
         .mt-3.mt-sm-5
-          a(href='#demoes' data-offset=60 data-zanim-xs!={delay: 1.3}).btn.btn-dark.btn-sm.me-2.my-2 Explorez les pièces.
-          a(href='https://themes.getbootstrap.com/product/sparrow-simple-seamless-alive/' target="_blank" data-zanim-xs!={delay: 1.3}).btn.btn-outline-dark.btn-sm.my-2 À propos de la collection. &xrarr;
+          a(href='#Gallery' data-offset=60 data-zanim-xs!={delay: 1.3}).btn.btn-dark.btn-sm.me-2.my-2 Explorez les pièces.
+          a(href='#Collection' target="_blank" data-zanim-xs!={delay: 1.3}).btn.btn-outline-dark.btn-sm.my-2 À propos de la collection. &xrarr;
 
-  +Section.font-secondary.text-center.py-6.py-xl-9.bg-dark
+
+  +Section.font-secondary.text-center.py-6.py-xl-9.bg-dark#Collection
     .row.justify-content-center
       .col-xl-9.col-lg-10
-        .fs-7.text-body-tertiary Turn your project from 
-          h3.d-inline-block.fw-bold.text-white mediocre to remarkable
-          |  — a design that is simple, seamless and alive! With Sparrow, your outstanding website is just one step away. Create with it what you will.
+        .fs-7.text-body-tertiary 
+          h3.d-inline-block.fw-bold.text-white Provenance 
+          |  — Cette belle collection de meubles design scandinave des années 1950-1960 appartenait à l’ambassadeur du Danemark auprès de l'OTAN. Elle fut achetée par un diplomate anglais, William Newton, au début des années 1960, lorsque l'ambassadeur du Danemark rentra au Danemark. Les meubles furent hérités par la propriétaire actuelle, Mme Newton. Les designers furent identifiés par des spécialistes de Bruun Rasmussen Kunstauktioner, maison de ventes aux enchères à Copenhague.
+        hr.hr-short.mt-6.opacity-1
+        .fs-7.text-body-tertiary 
+          h3.d-inline-block.fw-bold.text-white Arne Vodder
+          |  — 6 chaises Ella et Meuble en teck pour tourne disque avec portes tambour, probablement Arne Vodder ‘OS 28’ 
+        hr.hr-short.mt-6.opacity-1
+        .fs-7.text-body-tertiary 
+          h3.d-inline-block.fw-bold.text-white Arne Hovmand-Olsen
+          |  — Sofa et 2 fauteuils Mod 27 'Flying wings'
+        hr.hr-short.mt-6.opacity-1
+        .fs-7.text-body-tertiary 
+          h3.d-inline-block.fw-bold.text-white  Kai Kristiansen
+          |  — 2 fauteuils 'Paper knife' et tabouret 
+        hr.hr-short.mt-6.opacity-1
+        .fs-7.text-body-tertiary 
+          h3.d-inline-block.fw-bold.text-white Kurt Østervig
+          |  — Table de repas en teck avec double rallonge style papillon
+        hr.hr-short.mt-6.opacity-1
+        .fs-7.text-body-tertiary 
+          h3.d-inline-block.fw-bold.text-white Arne Wahl Iversen
+          |  — Bureau en teck type secrétaire avec rabattant.   
+        hr.hr-short.mt-6.opacity-1
+        .fs-7.text-body-tertiary 
+          h3.d-inline-block.fw-bold.text-white Mogens Lassen
+          |  — la fameuse table basse ronde et pliante, 'Egyptienne' - Vendu 
         hr.hr-short.mt-6.opacity-1
 
-  +Section('container-fluid').pb-4.pt-3.bg-dark#demoes
-    .row.mx-0(data-isotope!={
-      layoutMode: 'packery',   
-    })
-      each value, index in showcaseItems
-        each v, i in value
-          .col-lg-4.col-md-6.isotope-item.mb-4
-            a(href=`${index}/${v}.html` target="_blank")
-              h6.fs-9.mb-3.text-center.text-white.text-capitalize=v
-              img(src=`${CWD}assets/img/screenshots/${index}/${v}.jpg` alt='').img-fluid.rounded
+  +Section.text-center#Gallery
+    .row.justify-content-between
+      mixin ZenFeature(img, title, des, link)
+        a(href=link).div
+          img(src=img alt="" data-zanim-xs!={delay: 0.1, animation: "zoom-in"}).rounded-4.img-fluid
+          .overflow-hidden
+            h4.mt-4(data-zanim-xs!={delay: 0.2})=title
+          .overflow-hidden
+            p(data-zanim-xs!={delay: 0.3})=des
 
+      .col-lg-6.px-lg-6(data-zanim-timeline!={delay: 0.1} data-zanim-trigger="scroll")
+        +ZenFeature(
+          `${CWD}assets/img/scandi/lg-newton-1.jpg`,
+          "Meuble pour musique 'OS 28'",
+          "Arne Vodder",
+          "meubles/meuble-pour-musique.html")
+      .col-lg-6.px-lg-6.pt-6.pt-lg-0(data-zanim-timeline!={delay: 0.2} data-zanim-trigger="scroll")
+        +ZenFeature(
+          `${CWD}assets/img/scandi/lg-newton-32.jpg`,
+          "'Flying wings' sofa et 2 fauteuils",
+          "Kai Kristiansen.",
+          "meubles/flying-wings-sofa.html")
+      .col-lg-6.px-lg-6.pt-6(data-zanim-timeline!={delay: 0.3} data-zanim-trigger="scroll")
+        +ZenFeature(
+          `${CWD}assets/img/scandi/lg-newton-42.jpg`,
+          "Fauteuils 'Paperknife' et Tabouret",
+          "Kai Kristiansen.",
+          "meubles/fauteuils-paperknife.html")
+      .col-lg-6.px-lg-6.pt-6(data-zanim-timeline!={delay: 0.4} data-zanim-trigger="scroll")
+        +ZenFeature(
+          `${CWD}assets/img/scandi/lg-newton-28.jpg`,
+          "Secrétaire en teck avec rabattant",
+          "Peter Hdvit.",
+          "meubles/secretaire.html")
 
-  +Section.pb-0
-    .row
-      .col-lg-6.px-5.py-3
-        hr.text-danger.opacity-1.ms-0(data-zanim-xs!={from:{width: 0}, to: {width: '100%'}} data-zanim-trigger='scroll')
-        h2.fw-normal GPU enhanced animation for life-like experiences
-      .col-lg-6.px-5.py-3
-        hr.text-danger.opacity-1.ms-0(data-zanim-xs!={delay: 0.2, from:{width: 0}, to: {width: '100%'}} data-zanim-trigger='scroll')
-        h2.fw-normal All the power of Bootstrap 4 core &amp; popular plugins
-      .col-lg-6.px-5.py-3
-        hr.text-danger.opacity-1.ms-0(data-zanim-xs!={delay: 0.4, from:{width: 0}, to: {width: '100%'}} data-zanim-trigger='scroll')
-        h2.fw-normal Works from IE 11 to Safari &amp; everything in between
-      .col-lg-6.px-5.py-3
-        hr.text-danger.opacity-1.ms-0(data-zanim-xs!={delay: 0.6, from:{width: 0}, to: {width: '100%'}} data-zanim-trigger='scroll')
-        h2.fw-normal More extendable, customizable &amp; hackable
-        
-    .row.justify-content-center.text-center
-      .col-lg-8.col-xl-8.py-8
-        hr.hr-short.mb-6.opacity-1
-        p.font-secondary.lead.text-dark Discover all the possibilities you can create with Sparrow
-        a.btn.btn-danger.mt-3(href='#') Purchase now
+      .col-lg-6.px-lg-6(data-zanim-timeline!={delay: 0.1} data-zanim-trigger="scroll")
+        +ZenFeature(
+          `${CWD}assets/img/scandi/lg-newton-22.jpg`,
+          "Chaises Suédoise",
+          "",
+          "meubles/chaises-suedoise.html")
+      .col-lg-6.px-lg-6.pt-6.pt-lg-0(data-zanim-timeline!={delay: 0.2} data-zanim-trigger="scroll")
+        +ZenFeature(
+          `${CWD}assets/img/scandi/lg-newton-56.jpg`,
+          "Tables d'Appoint",
+          "Kurt Østervig",
+          "meubles/tables-appoint.html")
+      .col-lg-6.px-lg-6.pt-6(data-zanim-timeline!={delay: 0.3} data-zanim-trigger="scroll")
+        +ZenFeature(
+          `${CWD}assets/img/scandi/lg-newton-70.jpg`,
+          "Table Basse 'Surf'",
+          "",
+          "meubles/table-basse-surf.html")
+      .col-lg-6.px-lg-6.pt-6(data-zanim-timeline!={delay: 0.4} data-zanim-trigger="scroll")
+        +ZenFeature(
+          `${CWD}assets/img/scandi/lg-newton-71.jpg`,
+          "Table Basse Rectangulaire",
+          "Kurt Østervig.",
+          "meubles/table-basse-rectangulaire.html")
+
+      .col-lg-6.px-lg-6(data-zanim-timeline!={delay: 0.1} data-zanim-trigger="scroll")
+        +ZenFeature(
+          `${CWD}assets/img/scandi/lg-newton-18.jpg`,
+          "Secrétaire en Teck",
+          "",
+          "meubles/table-secretaire.html")
+      .col-lg-6.px-lg-6.pt-6.pt-lg-0(data-zanim-timeline!={delay: 0.2} data-zanim-trigger="scroll")
+        +ZenFeature(
+          `${CWD}assets/img/scandi/lg-newton-77.jpg`,
+          "TTable de Repas en Teck",
+          "Kurt Østervig",
+          "meubles/table-repas.html")
+      .col-lg-6.px-lg-6.pt-6(data-zanim-timeline!={delay: 0.3} data-zanim-trigger="scroll")
+        +ZenFeature(
+          `${CWD}assets/img/scandi/lg-newton-55.jpg`,
+          "Chaises Ella",
+          "Arne Vodder",
+          "meubles/chaises-ella.html")

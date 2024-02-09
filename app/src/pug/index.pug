@@ -1,5 +1,6 @@
 extends layouts/LayoutTheme
 include ./mixins/homes/Showcase.pug
+include ./mixins/homes/Bicycle.pug
 
 prepend styles
   link(href=`${CWD}vendors/swiper/swiper-bundle.min.css`, rel='stylesheet')
@@ -12,12 +13,7 @@ prepend scripts
 block beforeMainContent
   +FancyNav
 
-append variables
-  -
-    var showcaseItems = {
-      homes: ['default', 'bigcartel', 'cafe', 'bicycle', 'digital', 'ecommerce', 'event', 'interior', 'landing', 'promotion', 'software', 'studio'],
-      pages: ['404', 'about', 'blog', 'cart', 'casestudy', 'coming-soon', 'contact', 'split-static', 'split-youtube', 'portfolio', 'profile', 'rtl', 'services', 'shop', 'signin', 'signup', 'blog-single', 'product-single'],
-    };
+
 
 append mainContent
   +Showcase
