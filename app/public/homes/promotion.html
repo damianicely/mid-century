@@ -41,7 +41,7 @@
 
 
     <nav class="fancynavbar fancynavbar-expand-lg" data-zanim-lg='{"from":{"opacity":1,"x":70},"to":{"opacity":1,"x":0},"ease":"CubicBezier","duration":0.8,"delay":0.3}' data-zanim-xs='{"from":{"opacity":1,"y":-37},"to":{"opacity":1,"y":0},"ease":"CubicBezier","duration":0.8,"delay":0.3}' data-zanim-trigger="scroll" data-exclusive="true">
-      <div class="fancynavbar-togglerbar"><a class="fancynavbar-brand" href="../index.html"><img class="fancynavbar-brand-img" src="../assets/img/logo-sparrow-invert.svg" alt="" width="30" height="30" data-zanim-lg='{"from":{"opacity":0,"x":45},"to":{"opacity":1,"x":0},"ease":"CubicBezier","duration":0.8,"delay":0.4}' data-zanim-trigger="scroll" />
+      <div class="fancynavbar-togglerbar" data-onscroll-fade-in="data-onscroll-fade-in"><a class="fancynavbar-brand" href="../index.html"><img class="fancynavbar-brand-img" src="../assets/img/logo-sparrow-invert.svg" alt="" width="30" height="30" data-zanim-lg='{"from":{"opacity":0,"x":45},"to":{"opacity":1,"x":0},"ease":"CubicBezier","duration":0.8,"delay":0.4}' data-zanim-trigger="scroll" />
 
           <!--You can use icon or text logo as well-->
           <!--<span class='fab fa-superpowers fs-6'></span>-->
@@ -134,39 +134,164 @@
 
       <!-- ============================================-->
       <!-- <section> begin ============================-->
-      <section class="py-6" id="page-single-product">
+      <section class="py-0" id="promotionHeader">
+
+        <div class="bg-holder overlay overlay-z-index-1" style="background-image:url(../assets/img/headers/header-promotion.jpg);" data-zanim-xs='{"delay":0.4,"animation":"zoom-out"}' data-zanim-trigger="scroll">
+          <div class="yt-video" data-youtube-embed='{"videoId":"abiaOTuBemk","startSeconds":10,"endSeconds":50,"loop":true}'></div>
+        </div>
+        <!--/.bg-holder-->
+
+        <div class="container">
+          <div class="row min-vh-50 align-items-center py-9">
+            <div class="col-lg-6" data-zanim-timeline='{"delay":0.4}' data-zanim-trigger="scroll">
+              <div class="overflow-hidden">
+                <h1 class="fs-5 fs-md-4 text-white display-4" data-zanim-xs='{"delay":0.1}'>Get it done<br />with sparrow</h1>
+              </div>
+              <div class="overflow-hidden">
+                <h4 class="fw-normal mb-4 text-white text-opacity-85 mt-5" data-zanim-xs='{"delay":0.2}'>Grow your business with full responsive website.</h4>
+              </div>
+              <div class="overflow-hidden">
+                <div class="input-group pe-lg-7" data-zanim-xs='{"delay":0.3}'>
+                  <input class="form-control bg-transparent text-white border-light-subtle" type="text" placeholder="What type of website do you need?" aria-label="Recipient's username" aria-describedby="button-addon-interior" />
+                  <button class="btn btn-light px-3 fw-normal bg-body-secondary" id="button-addon-interior" type="button">get started</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><!-- end of .container-->
+
+      </section>
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
+
+
+
+
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      <section class="py-4" id="promotionPartners">
+
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-sm-auto pe-6">
+              <h6 class="mt-4 mt-md-0">TRUSTED BY 5M+<br class="d-none d-sm-block" />BUSINESSES</h6>
+            </div>
+            <div class="col-sm ms-auto mt-sm-0">
+              <div class="row" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+                <div class="col-auto col-md-4 col-lg-auto my-3" data-zanim-xs='{"animation":"slide-left","delay":0.1}'><img class="logo" src="../assets/img/logo/04.jpg" alt="" /></div>
+                <div class="col-auto col-md-4 col-lg-auto my-3" data-zanim-xs='{"animation":"slide-left","delay":0.2}'><img class="logo" src="../assets/img/logo/22.png" alt="" /></div>
+                <div class="col-auto col-md-4 col-lg-auto my-3" data-zanim-xs='{"animation":"slide-left","delay":0.3}'><img class="logo" src="../assets/img/logo/23.png" alt="" /></div>
+                <div class="col-auto col-md-4 col-lg-auto my-3" data-zanim-xs='{"animation":"slide-left","delay":0.4}'><img class="logo" src="../assets/img/logo/24.png" alt="" /></div>
+                <div class="col-auto col-md-4 col-lg-auto my-3" data-zanim-xs='{"animation":"slide-left","delay":0.5}'><img class="logo" src="../assets/img/logo/26.png" alt="" /></div>
+                <div class="col-auto col-md-4 col-lg-auto my-3" data-zanim-xs='{"animation":"slide-left","delay":0.6}'><img class="logo" src="../assets/img/logo/28.png" alt="" /></div>
+              </div>
+            </div>
+          </div>
+        </div><!-- end of .container-->
+
+      </section>
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
+
+
+
+
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      <section class="bg-light" id="promotionVideo">
+
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6 pe-sm-8" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+              <div class="overflow-hidden">
+                <h2 data-zanim-xs='{"delay":0.1}'>Your sparrow developers are ahead of the curve.</h2>
+              </div>
+              <div class="overflow-hidden">
+                <h5 class="mt-4" data-zanim-xs='{"delay":0.2}'>Patric Cournoyer</h5>
+              </div>
+              <div class="overflow-hidden">
+                <h6 class="text-body" data-zanim-xs='{"delay":0.3}'>CEO &amp; Founder, Sparrow inc.</h6>
+              </div>
+              <div class="mt-4" data-zanim-xs='{"delay":0.4}'><a class="btn btn-outline-dark" href="#!">see more stories</a></div>
+            </div>
+            <div class="col-lg-6 mt-6 mt-lg-0">
+              <div class="ratio ratio-16x9">
+                <div class="bg-holder rounded" style="background-image:url(../assets/img/promotion-01.jpg);">
+                </div>
+                <!--/.bg-holder-->
+
+                <div class="d-flex align-items-center justify-content-center"><a class="text-white" href="#!" data-bigPicture='{"ytSrc":"dStITCgn73w"}'><span class="fa-layers fa-fw fs-5"><i class="fas fa-circle"></i><i class="text-dark fas fa-play" data-fa-transform="shrink-12 right-0.5"></i></span></a></div>
+              </div>
+            </div>
+          </div>
+        </div><!-- end of .container-->
+
+      </section>
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
+
+
+
+
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      <section id="promotionFooter">
 
         <div class="container">
           <div class="row">
-            <div class="col-lg-8 pe-lg-6">
-              <div class="row">
-                <div class="col-12">
-                  <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb font-secondary py-2 my-1">
-                      <li class="breadcrumb-item"><a href="../index.html">Accueil</a></li>
-                      <li class="breadcrumb-item active" aria-current="page">chaises-suédoise</li>
-                    </ol>
-                  </nav>
-                  <h1 class="fs-6 mb-2">Chaises Suédoise</h1>
-                </div>
-                <div class="col-12 mt-4"><img class="rounded img-fluid" src="../assets/img/scandi/lg-newton-22.jpg" alt="" /></div>
-                <div class="col-6 mt-4"><img class="rounded img-fluid" src="../assets/img/scandi/lg-newton-23.jpg" alt="" /></div>
-                <div class="col-6 mt-4"><img class="rounded img-fluid" src="../assets/img/scandi/lg-newton-24.jpg" alt="" /></div>
-                <div class="col-12 mt-4"><img class="rounded img-fluid" src="../assets/img/scandi/lg-newton-25.jpg" alt="" /></div>
-                <div class="col-6 mt-4"><img class="rounded img-fluid" src="../assets/img/scandi/lg-newton-26.jpg" alt="" /></div>
-                <div class="col-6 mt-4"><img class="rounded img-fluid" src="../assets/img/scandi/lg-newton-27.jpg" alt="" /></div>
-              </div>
+            <div class="col-12">
+              <h4>Browse top services</h4>
+              <hr />
             </div>
-            <div class="col-lg-4">
-              <div class="sticky-top py-6 py-lg-8">
-                <h2 class="fw-normal">€2800.00&nbsp;</h2>
-                <h6 class="mt-4">Detailles</h6>
-                <p class="text-body-secondary">Chaises de Salle à Manger en Teck Danois Suédoise, très raffiné - Ensemble de 4</p>
-                <h6 class="mt-4">Etat</h6>
-                <p class="text-body-secondary">Bon</p>
-                <h6 class="mt-4">Quantité</h6>
-                <p class="text-body-secondary">Ensemble de 4</p>
-                <h6 class="mt-4">Contact</h6><a class="p text-body-secondary" mailto="damianicely@gmail.com">damianicely@gmail.com</a>
+            <div class="col-12 mt-4 font-secondary">
+              <div class="row">
+                <div class="col-6 col-lg">
+                  <ul class="list-unstyled">
+                    <li><a class="py-1 d-inline-block text-body" href="#!">Android Developers</a></li>
+                    <li><a class="py-1 d-inline-block text-body" href="#!">AngularJS Developers</a></li>
+                    <li><a class="py-1 d-inline-block text-body" href="#!">Bookkeepers</a></li>
+                    <li><a class="py-1 d-inline-block text-body" href="#!">C# Developers</a></li>
+                    <li><a class="py-1 d-inline-block text-body" href="#!">Content Writers</a></li>
+                    <li><a class="py-1 d-inline-block text-body" href="#!">Copywriters</a></li>
+                    <li><a class="py-1 d-inline-block text-body" href="#!">Customer Service Representatives</a></li>
+                    <li><a class="py-1 d-inline-block text-body" href="#!">Data Entry Specialists</a></li>
+                  </ul>
+                </div>
+                <div class="col-6 col-lg">
+                  <ul class="list-unstyled">
+                    <li><a class="py-1 d-inline-block text-body" href="#!">Email Marketing Consultants</a></li>
+                    <li><a class="py-1 d-inline-block text-body" href="#!">Excel Experts</a></li>
+                    <li><a class="py-1 d-inline-block text-body" href="#!">Facebook Marketers</a></li>
+                    <li><a class="py-1 d-inline-block text-body" href="#!">Graphic Designers</a></li>
+                    <li><a class="py-1 d-inline-block text-body" href="#!">iOS Developers</a></li>
+                    <li><a class="py-1 d-inline-block text-body" href="#!">JavaScript Developers</a></li>
+                    <li><a class="py-1 d-inline-block text-body" href="#!">jQuery Developers</a></li>
+                    <li><a class="py-1 d-inline-block text-body" href="#!">Mobile App Developers</a></li>
+                  </ul>
+                </div>
+                <div class="col-6 col-lg">
+                  <ul class="list-unstyled">
+                    <li><a class="py-1 d-inline-block text-body" href="#!">Objective-C Developers</a></li>
+                    <li><a class="py-1 d-inline-block text-body" href="#!">PHP Developers</a></li>
+                    <li><a class="py-1 d-inline-block text-body" href="#!">Python Developers</a></li>
+                    <li><a class="py-1 d-inline-block text-body" href="#!">Sales Consultants</a></li>
+                    <li><a class="py-1 d-inline-block text-body" href="#!">SEO Experts</a></li>
+                    <li><a class="py-1 d-inline-block text-body" href="#!">Social Media Consultants</a></li>
+                    <li><a class="py-1 d-inline-block text-body" href="#!">Swift Developers</a></li>
+                    <li><a class="py-1 d-inline-block text-body" href="#!">Technical Writers</a></li>
+                  </ul>
+                </div>
+                <div class="col-6 col-lg">
+                  <ul class="list-unstyled">
+                    <li><a class="py-1 d-inline-block text-body" href="#!">UI Designers</a></li>
+                    <li><a class="py-1 d-inline-block text-body" href="#!">UX Designers</a></li>
+                    <li><a class="py-1 d-inline-block text-body" href="#!">Virtual Assistants</a></li>
+                    <li><a class="py-1 d-inline-block text-body" href="#!">Web Designers</a></li>
+                    <li><a class="py-1 d-inline-block text-body" href="#!">Wordpress Developers</a></li>
+                    <li><a class="py-1 d-inline-block text-body" href="#!">Writers</a></li>
+                    <li><a class="py-1 d-inline-block" href="#!">See All Skills<span class="ms-1 fs-8 d-inline-block">&raquo;</span></a></li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -233,6 +358,7 @@
     <script src="../vendors/bootstrap/bootstrap.min.js"></script>
     <script src="../vendors/anchorjs/anchor.min.js"></script>
     <script src="../vendors/is/is.min.js"></script>
+    <script src="../vendors/bigpicture/BigPicture.js"> </script>
     <script src="../vendors/fontawesome/all.min.js"></script>
     <script src="../vendors/lodash/lodash.min.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
